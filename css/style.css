@@ -1,0 +1,253 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* <!-- Novels navbar section css --> */
+.container {
+    background: #181818;
+}
+
+.novels-navbar-items {
+    padding-top: 21px;
+    border: 1px solid #DFD4BF;
+}
+
+.novels-navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 83px
+}
+
+.novels-left-logo {
+    height: 58px;
+    width: 44px;
+    margin-left: 27px;
+}
+
+.novels-right-logo {
+    height: 56px;
+    width: 76px;
+    margin-right: 31px;
+}
+
+.novels-navbar p {
+    padding-top: 13px;
+}
+
+.novel-scroll {
+    width: 663.31px;
+    /* height: 76.02px; */
+    height: 18%;
+    font-family: 'Cardinal Classic Long';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24.6393px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #DFD4BF;
+    margin-right: 10px;
+}
+
+.scroll {
+    width: 663.31px;
+    height: 76.02px;
+    font-family: 'Cardinal Classic Long';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #DFD4BF;
+}
+
+/* <!-- Novels navbar section  --> */
+
+
+/* <!-- Novels items section  --> */
+.novel-item-section {
+    background: #000;
+    overflow: hidden;
+    height: 100vh !important;
+}
+
+.novels-items {
+    transform: translate(0.3%, -50%) rotate(-90deg);
+    display: block;
+}
+
+.novels-links {
+    max-width: 50%;
+    height: 193vh;
+}
+
+.novels-links li {
+    border: 1px solid #DFD4BF;
+    height: 19.88%;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+
+}
+
+.novels-links a {
+    text-decoration: none;
+}
+.novel-oracles:hover{
+background-image: url(../assects/images/Screenshot\ 2022-03-31\ at\ 16.49\ 1.svg);
+background-position: center;
+background-size: contain;
+transition-duration: 2s;
+
+}
+
+.novel-oracles a {
+    font-size: 33.117px;
+    font-family: 'Cardinal Classic Long';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #DFD4BF;
+}
+
+.novel-hounds a {
+    /* width: 908.61px; */
+    text-transform: uppercase;
+    font-family: 'Cardinal Classic Long';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28.7964px;
+    line-height: 38px;
+    color: #DFD4BF;
+}
+
+.novel-entangled a {
+    text-transform: uppercase;
+    font-family: 'Cardinal Classic Long';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33.117px;
+    line-height: 44px;
+    color: #DFD4BF;
+}
+
+.novel-tale a {
+    text-transform: uppercase;
+    font-family: 'Cardinal Classic Long';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33.117px;
+    line-height: 44px;
+    color: #DFD4BF;
+}
+
+.novel-aramada a {
+    text-transform: uppercase;
+    font-family: 'Cardinal Classic Long';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33.117px;
+    line-height: 44px;
+    color: #DFD4BF;
+}
+
+
+/* <!-- Novels navbar section  Media css--> */
+@media (max-width: 575.98px) {
+    .novels-left-logo {
+        height: 43px;
+        width: 27px;
+        margin-left: 19px;
+    }
+    .novels-navbar p {
+        padding-top: 0px;
+        width: 193px;
+    }
+    .scroll {
+        font-size: 14px;
+    
+    }
+    .novel-scroll{
+        font-size: 12px;
+    }
+    .novels-right-logo {
+        height: 41px;
+        width: 49px;
+        margin-right: 22px;
+    }
+    .novel-hounds a{
+        font-size: 24.117px
+    }
+    .novel-entangled a{
+        font-size: 24.117px
+    }
+    .novel-tale a{
+        font-size: 24.117px
+    }
+    .novel-aramada a{
+        font-size: 24.117px
+    }
+    .novel-oracles a{
+        font-size: 24.117px
+    }
+
+    
+}
+
+@media (max-width: 792px) {
+    .novels-items {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+    .novels-links {
+        max-width: 100% !important;
+        height: 116vh !important;
+    }
+    .novels-links li {
+        height: 13%;
+    
+    }
+    .novel-item-section {
+        height: 75vh !important;
+    }
+}
+@media (max-width: 992px) { 
+    .novels-items {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+    .novels-links {
+        max-width: 100% !important;
+        height: 116vh !important;
+    }
+    .novels-links li {
+        height: 13%;
+    
+    }
+    .novel-item-section {
+        height: 75vh !important;
+    }
+ }
+@media (max-width: 1292px) { 
+    .novels-links {
+        max-width: 50%;
+        height: 193vh;
+    }
+    .novel-item-section {
+        overflow: hidden;
+        height: 96vh !important;
+    }
+ }
+ @media (max-width: 1024px) { 
+    .novels-links {
+        max-width: 50%;
+        height: 150vh;
+    }
+    .novel-item-section {
+        overflow: hidden;
+        height: 83vh !important ;
+    }
+ }

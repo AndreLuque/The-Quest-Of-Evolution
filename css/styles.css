@@ -1,0 +1,780 @@
+@import url(./var.css);
+
+@font-face {
+    font-family: CardinalClassicLong;
+    src: url('../assects/fonts/cardinalclassiclong-regular-TRIAL.otf');
+    font-family: Romie;
+    src: url('../assects/fonts/Romie-Regular.otf'); 
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Romie','CardinalClassicLong';
+}
+
+/* home section  */
+.home-section {
+    background-image: url(../assects/images/sectionBg.svg);
+    background-position: inherit;
+    background-size: cover;
+    width: 100% !important;
+    height: 100vh;
+    display: flex;
+}
+.home-section .custom-container {
+    width: 60%;
+    margin: 0 auto;
+    z-index: 99999;
+}
+
+/* home innner*/
+.home-inner {
+    background-image: url(/assects/images/Group\ 51.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+}
+
+.home-journey{
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* .home-main .humbager {
+    padding-bottom: 5rem;
+} */
+
+.humbager img {
+    width: 8%;
+}
+
+.crypto {
+    font-size: 19.65px;
+    font-weight: 400px;
+    line-height: 24px;
+    letter-spacing: 0.05rem;
+    color: #DFD4BF;
+    margin-bottom: 1.5rem;
+}
+
+.crypto-span {
+    font-size: 15px;
+}
+
+.journey-anker {
+    text-decoration: none;
+
+}
+
+.journey-ankeres {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-family: 'Romie';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #DFD4BF;
+
+}
+
+.journey {
+    color: #DFD4BF;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #DFD4BF;
+    line-height: 18px;
+font-family: CardinalClassicLong;
+}
+
+  
+/* home sectio media end  */
+
+.d-none{
+display: none;
+}
+.d-block{
+display: block;
+}
+
+/* verse socrrol section start  */
+
+
+.containeres{
+    display: flex;
+    justify-content: center;
+}
+
+
+.verse-header {
+    border: 1px solid var(--white-color);
+
+}
+
+.verse-container {
+    height: 95.25px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.verse-container h2 {
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 24.6393px;
+    font-family: 'CardinalClassicLong';
+}
+
+.verse-main {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row !important;
+    border: 1px solid var(--white-color);
+}
+
+.verse-side-img {
+    /* max-width: 96%; */
+    margin: 0px auto;
+}
+
+.verse-side-img img {
+    width: 100%;
+    text-align: center;
+
+}
+
+.virsese-content {
+    width: 52%;
+    border-left: 1px solid var(--white-color);
+    height: 1000px;
+    overflow-x: hidden;
+}
+
+.verse-hr {
+    max-width: 683px;
+    color: var(--white-color);
+    margin-bottom: 21px;
+}
+
+.character-main {
+    margin-top: 8px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+}
+
+
+.character-left {
+    width: min-content;
+    margin-right: 63px;
+
+}
+
+.character-right {
+    width: min-content;
+}
+
+.content-box .entry-content {
+    color: var(--white-color);
+    margin-bottom: 0px;
+    font-size: 10px;
+    margin-bottom: 11px;
+     font-family: 'Romie';
+}
+.NOX{
+    font-family: 'Romie';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #DFD4BF;
+    margin-bottom: 21px;
+}
+.donat{
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white-color);
+    margin-bottom: 8px;
+   }
+
+.content-box .oracles-content {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 33px;
+    line-height: 39px;
+    margin-bottom: 16px;
+    font-family: 'Romie';
+}
+
+.content-box .oracles-span {
+    font-size: 20px;
+
+}
+
+.content-box h5 {
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin: 8px 0px
+}
+
+.content-box .archit{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    color: var(--white-color);
+    margin-bottom: 8px;
+}
+
+.decreption {
+    margin-top: 160px;
+}
+
+.decreption h2 {
+    font-family: 'Romie';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;  
+    color: #DFD4BF;
+    margin-bottom: 8px;
+}
+
+.decreption p {
+    font-family: 'CardinalClassicLong';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+color: #DFD4BF;
+margin-bottom: 68px;
+}
+
+.character h2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-bottom: 23px;
+}
+  
+  .accordion-flush .accordion-item{
+    background-color: transparent !important;
+    color: var(--white-color) !important;
+    border-top: 1px solid var(--white-color) !important;
+  }
+  .accordion-headings {
+    color: var(--white-color) !important;
+    font-family: 'Romie';
+  }
+  
+  .accordion-button {
+    color: var(--white-color) !important;
+    text-align: left;
+    font-family:'Romie' ;
+  }
+  
+  .accordion-button:focus {
+    z-index: -1;
+    color: var(--white-color) !important;
+    outline: none;
+    box-shadow: none !important;
+    font-family:'Romie' ;
+  }
+  .dexcript-heading{
+    color: var(--white-color);
+  }
+   
+  .accordion-flush .accordion-collapse {
+    border-width: 0;
+    background-color: transparent !important;
+    color: #fff;
+  }
+
+/* verse socrrol section end  */
+
+
+.home-main{
+    background-image: url(/assects/images/DarkBg.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 245px 0px 320px 0px;
+}
+
+.verse-section {
+    padding: 0px 2px;
+    background-color: var(--bg-color);
+}
+
+/* verse socrrlo media start  */
+
+
+
+
+
+.slaumun-main {
+    background-color: var(--bg-color);
+    display: flex;
+    border: 1px solid var(--white-color);
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.sluman-content {
+    padding: 0px 39px;
+}
+
+.sluman-content h2 {
+    font-weight: 400;
+    font-size: 53px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--white-color);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    font-family: 'Romie';
+}
+
+.sluman-content h2 span {
+    font-size: 25px;
+}
+
+.sluman-content h4 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-bottom: 4px;
+    font-family: 'CardinalClassicLong';
+}
+
+.sluman-content h4 span {
+    text-decoration: underline;
+    margin-right: 9.3px;
+}
+
+.connect-main h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-left: 10px;
+    text-decoration: underline;
+    font-family: 'Romie';
+}
+
+.salumun-side-img {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.salumun-side-img .side-img {
+    width: 100%;
+}
+.frogetext {
+    text-decoration: underline;
+}
+.frogetext:hover {
+    cursor: pointer;
+}
+.frogetextthree {
+    text-decoration: underline;
+}
+.frogetextthree:hover {
+    cursor: pointer;
+}
+.modal-content{
+    background-color: transparent !important;
+    width: 100% !important;
+}
+.play-icon {
+    display: flex;
+    margin-bottom: 15px;
+   
+}
+
+.play-icon .play {
+    width: 55px;
+    margin-right: 20px;
+}
+
+.play-icon .playbar {
+    width: 71%;
+}
+
+.connect-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.salumun-side-img .pholder-cat {
+    width: 55px !important;
+}
+    .slumun-content-box {
+        width: 55%;
+        padding: 0 70px;
+    }
+.slumun-content-box p{
+font-family: 'CardinalClassicLong';
+}
+
+
+.slumun-content-box h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white-color);
+    margin-bottom: 8px;
+}
+
+.slumun-content-box hr {
+    width: 90%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.slumun-content-box p {
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 2rem;
+}
+.slumun-content-box  .fourth{
+margin-bottom: 31px;
+}
+.meta-mask{
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 325.54px;
+    border: 1px solid var(--white-color);
+    margin: 0px 0px;
+    position: relative;
+    overflow: hidden !important;
+}
+.sub-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 325.54px;
+    border: 1px solid var(--white-color);
+    margin: 0px 0px;
+    position: relative;
+    overflow: hidden !important;
+}
+.sub-content .text-box {
+    display: flex; flex-direction: column; align-items: center;
+}
+.sub-content .text-box textarea {
+    background: transparent; color: #fff; border: none; outline: none;
+    width: 53.8rem;
+    height: 30vh !important;
+    padding: 37px 5px;
+}
+.sub-content .text-box textarea:focus {
+    border: none; outline: none;
+}
+.count{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: white;
+    margin: 10px 10px 0px 0px;
+    text-transform: uppercase;
+}
+.sub-content h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-left: 10.25px;
+    margin-bottom: 13px;
+}
+.meta-mask h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-left: 10.25px;
+    margin-bottom: 13px;
+    font-family: 'Romie';
+}
+
+.slumun-content-box .span {
+    color: var(--white-color);
+ font-size: 81px;
+ margin-right: 7px;
+ margin-top: -17px; 
+}
+
+.first-para {
+    display: flex;
+}
+
+.first-para p {
+    margin-top: 15px;
+}
+
+
+
+
+/* pop uup start  */
+.home-main h2 {
+    font-weight: 400;
+    font-size: 53.3448px;
+    line-height: 64px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-family: 'Romie';
+}
+
+.home-main p {
+    font-family: 'CardinalClassicLong';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--white-color);
+    width: 50%;
+    margin: 0px auto;
+    margin-bottom: 26px;
+}
+
+/* pop uup media  */
+
+.home-main .para{
+    /* width: 40%; */
+    font-weight: 400;
+
+}
+
+.anker{
+text-decoration: none;
+color: var(--white-color) !important;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+border-bottom: 1px solid var(--white-color);
+margin: 20px 18px 0px 0px;
+cursor: pointer;
+font-family: 'Romie';
+text-decoration: none;
+}
+/* <!-- Novels navbar section css --> */
+.containeres {
+    background: #181818;
+}
+
+.novels-navbar-items {
+    padding-top: 21px;
+    border: 1px solid #DFD4BF;
+}
+
+.novels-navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 83px
+}
+
+.novels-left-logo {
+    height: 58px;
+    width: 44px;
+    margin-left: 27px;
+}
+
+.novels-right-logo {
+    height: 56px;
+    width: 76px;
+    margin-right: 31px;
+}
+
+.novels-navbar p {
+    padding-top: 13px;
+}
+
+.novel-scroll {
+    width: 663.31px;
+    height: 18%;
+    font-family: 'CardinalClassicLong';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24.6393px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #DFD4BF;
+    margin-right: 10px;
+}
+
+.scroll {
+    width: 663.31px;
+    height: 76.02px;
+    font-family: 'CardinalClassicLong';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #DFD4BF;
+}
+
+/* <!-- Novels navbar section  --> */
+
+
+/* <!-- Novels items section  --> */
+.novel-item-section {
+    background: #000;
+    overflow: hidden;
+    height: 89vh;
+}
+
+.novels-items {
+    transform: translate(4.4%, -51%) rotate(-90deg);
+    display: block;
+}
+
+.novels-links {
+    max-width: 50%;
+    height: 205vh;
+}
+
+.novels-links li {
+    border: 1px solid #DFD4BF;
+    height: 18.38%;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    text-decoration: none;
+
+}
+.novels-links li a{
+    text-decoration: none;
+    color: #DFD4BF;
+    font-size: 33.117px;
+    font-family: 'CardinalClassicLong';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #DFD4BF;
+    text-decoration: none;
+}
+
+.novel-oracles:hover{
+background-image: url(../assects/images/Screenshot\ 2022-03-31\ at\ 16.49\ 1.svg);
+background-position: center;
+background-size: contain;
+text-decoration: none;
+transition-duration: 2s;
+color: var(--white-color);
+
+}
+
+/* <!-- Novels navbar section  Media css--> */
+
+
+
+ .frogesectionone{
+    display: none;
+}
+.frogesectiontwo{
+    display: none;
+}
+#frogesectionthree{
+    display: none;
+}
+.containeres{
+    display: none;
+}
+ .frogesectiontwo{
+     display: none;
+ }
+ #staticBackdrop1{
+     display: none;
+ }
+
+ /* accordins */
+ .accordion-item{
+     background-color: transparent !important;
+ }
+ .accordion-button{
+    background-color: transparent !important;
+ }
+ .accordion-body .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+ }
+ .accordion-body p {
+  font-size: 20px;
+  font-family: 'CardinalClassicLong';
+ }
+ .accordion-button:not(.collapsed){
+     color: white !important;
+}
+
+.accordion-button::after {
+    background-image: url('../assects/icons/open.svg') !important;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url('../assects/icons/close.svg') !important;
+}
+   

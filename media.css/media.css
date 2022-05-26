@@ -1,0 +1,720 @@
+@media(max-width: 1450px) {
+    .home-main img {
+        width: 50%;
+    }
+    .home-section{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+
+    .home-inner {
+        background-position: center;
+        background-size: contain;
+        background-size: 80%;
+    }
+
+    .home-main .humbager {
+        padding-bottom: 5rem;
+    }
+
+    .humbager img {
+        width: 8%;
+    }
+    .home-section .custom-container{
+        width: 70%;
+    }
+
+}
+
+
+@media(max-width: 1280px){
+    .home-journey {
+ bottom: 251px;
+    }
+}
+
+
+@media(max-width: 1024px){
+    .home-journey {
+ bottom: 173px;
+    }
+}
+
+@media(max-width: 912px){
+    .home-journey {
+ bottom: 510px;
+    }
+    .custom-container{
+        width: 100% !important;
+    }
+    .slaumun-main {
+        flex-direction: column;
+    }
+    .home-main  {
+        width: 600px;
+        margin-left: -50px;
+    }
+}
+@media(max-width: 820px){
+
+    .home-section{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .home-inner{
+        background-position: center;
+        background-size: contain;
+       }
+       .custom-container{
+           width: 100% !important;
+       }
+       .home-journey {
+        bottom: 411px;
+           }
+}
+
+@media(max-width: 786px) {
+    .home-section{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .home-inner{
+     background-position: center;
+     background-size: contain;
+    }
+    
+    .home-journey{
+        bottom: 355px;
+    }
+    .journey {
+        font-size: 16px;
+    }
+
+    .home-main h1 {
+        font-size: 18px;
+    }
+
+    .home-main .humbager {
+        padding-bottom: 1.5rem;
+    }
+}
+
+
+
+@media(max-width: 540px) {
+    .home-main .para {
+        font-size: 13px;
+        line-height: 16px;
+        padding-bottom: 0px;
+        padding: 0 38px !important;
+    }
+    .home-main {
+        padding: 14rem 0px 16rem 0px;
+
+    }
+    .home-journey {
+        bottom: 234px;
+    }
+
+    .home-main h1 {
+        font-size: 12px;
+        width: 60%;
+        text-align: center;
+        margin: 0rem auto;
+        line-height: 12px;
+    }
+
+    .crypto-span {
+        font-size: 10px;
+    }
+
+    .home-main .humbager {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+
+    }
+    .journey {
+        font-size: 9px;
+    }
+    .novels-items {
+        transform: translate(0%, 0%) rotate(0deg);
+        max-width: 100% !important;
+        height: 50vh !important;
+    }
+   .novel-item-section {
+       height: 90vh !important;
+   }
+   .home-main {
+       background-image: url('../assects/images/Group\ 73.png') !important;
+   }
+
+}
+
+
+@media(max-width: 414px){
+    .home-journey {
+        bottom: 339px;
+    }
+    ul {
+        padding-left: 0rem !important;
+    }
+    .novels-items {
+        transform: translate(0%, 0%) rotate(0deg);
+        max-width: 100% !important;
+        height: 50vh !important;
+    }
+    #staticBackdrop1 p{
+        padding: 0 30px;
+    }
+    .count {
+        font-size: 12px !important;
+    }
+}
+
+@media(max-width: 390px){
+    .home-journey {
+        bottom: 332px;
+    }
+    .novels-items {
+        transform: translate(0%, 0%) rotate(0deg);
+        max-width: 100% !important;
+        height: 50vh !important;
+    }
+    }
+    
+    
+    @media(max-width: 375px){
+        .home-journey {
+            bottom: 248px;
+        }
+        }
+
+        
+@media(max-width: 360px){
+    .home-journey{
+        bottom: 284px;
+    }
+}
+@media(max-width: 280px){
+    .home-journey {
+        bottom: 260px;
+    }
+}
+
+
+@media(min-width: 1450px) {
+    .verse-side-img img {
+        min-width: 625.28px;
+        min-height: 854.64px;
+    }
+
+    .content-box {
+        padding: 114px 100px 0px 100px !important;
+    }
+
+    
+
+    .virsese-content {
+        height: 1000px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .verse-side-img img {
+        max-width: 450px;
+
+    }
+
+/* 
+    .virsese-content {
+        height: 689px;
+    } */
+
+    .content-box {
+        padding: 114px 30px 0px 30px;
+    }
+
+    .character-left{
+   width: 49%;
+    }
+    .character-right{
+    width: 49%;
+
+    }
+    .character-left img{
+     width: 100%;   
+    }
+    .character-right img{
+        width: 100%;
+    }
+}
+/* @media (min-width:800px) {
+    .character-right img{
+        width: 200px;
+    }
+} */
+@media(min-width: 768px) {
+    .verse-main{
+        flex-direction: column;
+    }
+    .verse-hr{
+        max-width: 100%;
+    }
+    .verse-side-img img {
+        max-width: 100%;
+    }
+
+    .content-box {
+        padding: 70px 20px 0px 20px;
+    }
+
+    /* .virsese-content {
+        height: fit-content;
+        width: 100%;
+    } */
+    .character{
+        padding-bottom: 20px;
+    }
+    .character-main{
+        justify-content: space-around;
+    }
+    .character-left{
+        margin-right: 0px;
+    }
+}
+
+
+@media(max-width: 512px) {
+    .verse-side-img {
+        margin-top: 25px;
+    }
+
+    .verse-main {
+        flex-direction: column;
+    }
+
+    .virsese-content {
+        width: 100%;
+        border-left: none;
+        margin-top: 12px;
+        padding: 0px 11px;
+        overflow: visible;
+        height: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .decreption {
+        margin-top: 26px;
+    }
+  .decreption p {
+            font-size: 16px;
+            line-height: 26px;
+            margin: 0px 0px 15px 0px;
+    }
+
+    .character img {
+        max-width: 173px;
+    }
+
+    .verse-container img {
+        width: 35px;
+    }
+
+    .verse-container h2 {
+        font-size: 14px;
+    }
+    .verse-hr {
+        max-width: 100%;
+        color: var(--white-color);
+        /* margin-top: 21px; */
+        opacity: 100%;
+    }
+    
+    .character h2 {
+        margin-bottom: 0px;
+    }
+    .sluman-content h4 {
+        margin-bottom: 13px;
+    }
+    .slumun-content-box {
+        /* margin-top: 38px; */
+        padding: 0px 20px;
+    }
+
+}
+
+@media(min-width: 1600px) {
+    .salumun-side-img .side-img{
+        width: 722px !important;
+    }
+}
+
+@media(min-width: 1400px) {
+    .salumun-side-img .side-img{
+        width: 600px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .salumun-side-img .side-img {
+        width: 500px;
+    }
+}
+
+@media(max-width: 912px) {
+    .virsese-content {
+        width: 100%;
+        overflow: visible;
+        height: fit-content;
+    }
+    .verse-section {
+        height: fit-content;
+    }
+    .verse-main {
+        flex-direction: column !important;
+    }
+
+    .salumun-side-img {
+        width: 100%;
+    }
+
+    .slumun-content-box {
+        width: 100%;
+        /* padding: 56px 50px 55px 50px; */
+    }
+
+    .play-icon .playbar {
+        width: 65%;
+    }
+
+}
+
+@media(max-width: 1200px) {
+    .home-main .owner-icon {
+        padding-bottom: 1rem;
+    }
+    .home-main h2 {
+        font-size: 23px;
+        line-height: 30px;
+        width: 100%;
+    }
+    .home-main p {
+        font-size: 20px;
+        line-height: 25px;
+        width: 92%;
+        margin-bottom: 5px;
+    }
+
+    .bg-size {
+        background-size: 100%;
+    }
+}
+
+@media(max-width: 912px){
+    .home-main .para{
+        font-size: 11px;
+        line-height: 13px;
+        padding-bottom: 0px;
+        width: 88% !important;
+    }
+}
+
+@media(max-width: 667px) {
+    .home-main h2 {
+        font-size: 17px !important;
+        line-height: 21px !important;
+    }
+    .home-main .owner-text {
+        font-size: 13px;
+    line-height: 14px;
+    padding-bottom: 0px;
+    }
+    .home-main img {
+        width: 41%;
+    }
+    .anker {
+        font-size: 14px;
+        line-height: 11px;
+        margin: 0px 0px 0px 0px;
+    }
+
+
+    .home-main .owner-icon {
+        margin-bottom: 0rem;
+        padding: 0rem;
+    }
+
+    .d-none {
+        display: none;
+    }
+    .verse-main {
+        flex-direction: column !important;
+    }
+    .accordion-body p {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .accordion-headings {
+        margin-top: 25px;
+    }
+   
+}
+
+@media(max-width: 412px) {
+    /* .owner-text {
+        display: none;   
+    } */
+
+    .owner-img {
+        width: 60% !important;
+        margin-bottom: 5px;
+    }
+    .anker {
+        font-size: 12px !important;
+        line-height: 20px;
+    }
+    .home-main .owner-text {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 992px) { 
+    .novels-items {
+        transform: translate(-3.6%, 0%) rotate(0deg);
+        max-width: 100% !important;
+        height: 100vh;
+    }
+    .novels-links {
+        max-width: 100%;
+        height: 116vh;
+    }
+    .novels-links li {
+        height: 10%;
+      width: 103%;
+    }
+    .novel-item-section {
+        height: 75vh;
+    }
+    .play-icon .play {
+        width: 44px;
+        margin-left: 72px;
+    }
+    .sluman-content h2 {
+        font-size: 40px;
+    line-height: 35px;
+    }
+    .sub-content {
+        height: fit-content !important;
+        margin-bottom: 20px !important;
+        
+    }
+
+    .sub-content .text-box {
+        width: 100% !important;
+    }
+    .sub-content textarea {
+        width: 100% !important;
+    }
+    .slumun-content-box{
+        padding: 0px 15px;
+    }
+   
+ }
+
+ @media(max-width: 1280px){
+    /* .owner-text{
+        display: none;
+    } */
+    .novel-item-section {
+        height: 82vh;
+    }
+    .novels-links {
+        height: 173.7vh;
+    }
+ }
+
+ @media(min-width: 1024px){
+   
+ }
+
+
+@media (max-width: 1292px) { 
+   
+    .novel-item-section {
+        overflow: hidden;
+        height: 96vh ;
+    }
+ }
+ @media (max-width: 1024px) { 
+    .novel-item-section {
+        overflow: hidden;
+        height: 86vh;
+    }
+    .novels-links {
+        height: 185vh !important;
+        padding-right: 0px;
+
+    }
+ }
+ @media (max-width: 575.98px) {
+    .sluman-content h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .novels-left-logo {
+        height: 43px;
+        width: 27px;
+        margin-left: 19px;
+    }
+    .novels-navbar p {
+        padding-top: 0px;
+        width: 193px;
+    }
+    .scroll {
+        font-size: 14px;
+    
+    }
+    .novel-scroll{
+        font-size: 12px;
+    }
+    .novels-right-logo {
+        height: 41px;
+        width: 49px;
+        margin-right: 22px;
+    }
+    .novels-links li a{
+        font-size: 16px;
+    }
+    .novels-links li {
+        height: 9% !important;
+    
+    }
+    .character-left {
+        margin-right: 13px;
+    }
+    .character-main {
+        display: flex;
+        justify-content: center;
+    }
+    .play-icon .play {
+        width: 53px;
+        margin-right: 8px;
+    }
+    .salumun-side-img .pholder-cat {
+        width: 46px !important;
+        margin-left: -17px;
+    }    
+    .connect-main h3{
+        font-size: 13px;
+    margin-left: 21px;
+    }
+    .play-icon {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .slumun-content-box h2{
+        margin-bottom: 0px;
+        font-size: 18px;
+        line-height: 0px;
+    }
+}
+
+@media (max-width: 792px) {
+    .novels-items {
+        transform: translate(1%, 0%) rotate(0deg);
+    }
+    .novels-links {
+        width: 100%;
+        height: 116vh ;
+    }
+    .novels-links li {
+        height: 13%;
+    
+    }
+    .novel-item-section {
+        height: 100vh !important;
+    }
+    
+    .sub-content {
+        height: 200px;
+        
+    }
+    .sub-content h3 {
+        margin-bottom: 9px;
+        font-size: 12px;
+    line-height: 18px;
+    }
+ #staticBackdrop1 .modal-body {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+ }
+
+ #staticBackdrop1 .homesectiontwo {
+     height: 472px !important;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: auto !important;
+ }
+.homesectionfour {
+    height: 473px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+.homesectionthree {
+    height: 473px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    margin: auto;
+}
+ #staticBackdrop1 .humbager img {
+     width: 35px !important;
+ } 
+ #staticBackdrop1 h2 {
+    font-size: 16px !important;
+ }
+ #staticBackdrop1 p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+ }
+ .home-main {
+     padding: 0 !important;
+ }
+}
+
+@media (max-width: 768px) {
+    .novels-links {
+        height: 223vh !important;
+        transform: translate(-18px, 0px);
+        height: 86vh;
+    }
+    .slaumun-main {
+        flex-direction: column !important;
+    }
+    .meta-mask h3 {
+        font-size: 14px !important;
+        line-height: 20px;
+    }
+    .slumun-content-box p{
+     font-size: 14px !important;
+     line-height: 22px;
+    }
+    .play-icon .play {
+        margin: 20px 0px !important;
+    }
+    .slumun-content-box .span {
+        font-size: 60px !important;
+    }
+}

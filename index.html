@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <title>Document</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -242,7 +243,7 @@
             <img src="./assects/images/vediobar.svg" alt="" class="playbar" />
           </div>
           <div class="connect-main">
-            <h3>connaect with meta mask</h3>
+            <h3 id="connect3">connect with meta mask</h3>
           </div>
           <img src="./assects/images/cat-pholder.svg" alt="" class="pholder-cat" />
         </div>
@@ -284,6 +285,7 @@
           faraway. After an age, he slowly removes his glasses. His pipe. A
           tear rolls down his cheek.
         </p>
+        <p id="userInput2"></p>
 
         <div class="sub-content">
           <div class="count">
@@ -291,7 +293,7 @@
           </div>
           <div class="text-box">
             <textarea id="inputField"></textarea>
-            <h3 class="frogetext" data-bs-toggle="modal" href="#exampleModalToggle" role="button">connect with meta mask
+            <h3 id="connect4" class="frogetext" data-bs-toggle="modal" href="#exampleModalToggle" role="button"">connect with meta mask
             </h3>
           </div>
         </div>
@@ -325,7 +327,7 @@
           </div>
           <div class="connect-main">
             <img src="./assects/images/cat-pholder.svg" alt="" class="pholder-cat" />
-            <h3>connect with meta mask</h3>
+            <a onclick="connect()";><h3 id="connect1">connect with meta mask</h3></a>
           </div>
         </div>
       </div>
@@ -365,6 +367,7 @@
           faraway. After an age, he slowly removes his glasses. His pipe. A
           tear rolls down his cheek.
         </p>
+        <p id="userInput"></p>
 
         <div class="sub-content">
           <div class="count">
@@ -374,7 +377,7 @@
             <textarea id="inputField2"></textarea>
             <div class="link-main d-flex align-items-center justify-content-center">
             <img src="./assects/images/cat-pholder.svg" alt="">
-            <h3 class="frogetextthree" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">connect with meta mask
+            <a onclick="connect();"><h3 class="frogetextthree" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" id="connect2">connect with meta mask</h3></a>
             </div>
           </div>
         </div>
@@ -443,7 +446,7 @@
               published, it will not be editable and will remain on-chain, forever.
             </p>
             <a href="" class="anker ankerone" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
-              data-bs-dismiss="modal">Accept</a>
+              data-bs-dismiss="modal" onclick="execute();">Accept</a>
             <a href="" class="anker ankertwo" data-bs-dismiss="modal" aria-label="Close">Decline</a>
           </div>
         </div>
@@ -456,14 +459,16 @@
       <div class="modal-content">
         <div class="modal-body">
           <div class="home-main bg-size homesectionthree">
-            <h2>YOU ARE NOW <br />A CONTRIBUTOR</h2>
+            <h2>BECOME A <br> CONTRIBUTOR</h2>
             <img src="./assects/images/hashbAR.svg" alt="" class="owner-img" />
             <p class="owner-text">
-              You have been granted DAO membership and access to the royalty pool of
+              Be granted DAO membership and access to the royalty pool of
               this NFT as well as the future sale of its IP rights.
             </p>
             <br>
-            <a href="" class="journey-anker journeytwo"><span class="journey">View Contribution</span></a>
+            <a href="#" class="journey-anker journeytwo" id="etherscan" target="_blank"><span class="journey">View Contribution</span></a>
+            <br>
+            <a href="#" class="journey-anker journeytwo"  data-bs-dismiss="modal" aria-label="Close"><span class="journey">Close</span></a>
           </div>
         </div>
       </div>
@@ -474,6 +479,600 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
   <script src="./javascript/model.js"></script>
+   <script type="text/javascript">
+
+            var contractAddress = '0x8B4270ed9a317c2F867aC5ed6352707dCAfc6644';
+
+      window.onload = function () {
+                //load(); 
+            }
+
+            async function connect() {
+                await load();
+                const account = await getAccount();
+                //await mint();
+
+                document.getElementById('connect1').innerHTML = 'Connected';
+                document.getElementById('connect2').innerHTML = 'Verify Ownership';
+                document.getElementById('connect3').innerHTML = 'Connected';
+                document.getElementById('connect4').innerHTML = 'Contribute';
+            }
+
+            async function execute() {
+                
+                const account = await getAccount();
+                var par = document.getElementById('inputField').value
+
+                const gas_ = await window.contract.methods.contribute(1, par).estimateGas({from: account});
+                const method = await window.contract.methods.contribute(1, par).send({from: account, gas: gas_}).on('receipt', async function(receipt) {
+                      document.getElementById('etherscan').href = 'https://rinkeby.etherscan.io/tx/' + receipt['transactionHash'];
+                      alert(par)
+                      document.getElementById('userInput').innerHTML = par;
+                      document.getElementById('userInput2').innerHTML = par;
+                });                
+
+
+            }    
+
+            
+            async function load() {
+                await loadWeb3();
+                window.contract = await loadContract();
+                
+            }
+            
+            async function loadWeb3() {
+                if (window.ethereum) {
+                  window.web3 = new Web3(window.ethereum);
+                }
+                else {
+                  window.alert('Metamask is not Installed! https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn')
+                }
+              }
+            
+            async function getAccount() {
+                const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                return accounts[0];
+
+                
+            }
+            
+            async function loadContract() {
+                return await new window.web3.eth.Contract([
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "number",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "newURI",
+        "type": "string"
+      }
+    ],
+    "name": "addTokens",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "approved",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "Approval",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "approved",
+        "type": "bool"
+      }
+    ],
+    "name": "ApprovalForAll",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "approve",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "paragraph",
+        "type": "string"
+      }
+    ],
+    "name": "contribute",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "number",
+        "type": "uint256"
+      }
+    ],
+    "name": "mint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "safeTransferFrom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "safeTransferFrom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "approved",
+        "type": "bool"
+      }
+    ],
+    "name": "setApprovalForAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "baseURI",
+        "type": "string"
+      }
+    ],
+    "name": "setBaseURI",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "Transfer",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferFrom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getApproved",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      }
+    ],
+    "name": "isApprovedForAll",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "writer",
+        "type": "address"
+      }
+    ],
+    "name": "isContributor",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "maxTokens",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "name",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "numberOfTokens",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ownerOf",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenID",
+        "type": "uint256"
+      }
+    ],
+    "name": "seeStory",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "symbol",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenURI",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+], contractAddress); //this arg is contract address, must change when deploying actual contract
+            }
+        </script>
 </body>
 
 </html>

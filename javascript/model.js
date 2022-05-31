@@ -101,14 +101,26 @@ function togglePages(currentPage, nextPage) {
 
 function countWords() {
     // Get the input text value
-    var text = document
-        .getElementById("inputField").value;
+    var text = document.getElementById("inputField").value;
     text = text.replace(/(^\s*)|(\s*$)/gi, "");
     text = text.replace(/[ ]{2,}/gi, " ");
     text = text.replace(/\n /, "\n");
     document.querySelector(".count-words").innerHTML = text.split(' ').length
 }
-
+function countWords2() {
+    // Get the input text value
+    var text = document.getElementById("inputField2").value;
+    text = text.replace(/(^\s*)|(\s*$)/gi, "");
+    text = text.replace(/[ ]{2,}/gi, " ");
+    text = text.replace(/\n /, "\n");
+    document.querySelector(".count-words2").innerHTML = text.split(' ').length;
+}
 document.getElementById("inputField").addEventListener('keydown', (e) => {
     countWords();
+});
+
+document.getElementById("inputField2").addEventListener('keydown', (e) => {
+    countWords2();
 })
+
+

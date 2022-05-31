@@ -9,8 +9,6 @@
        }
 
     .home-inner {
-        background-position: center;
-        background-size: contain;
         background-size: 80%;
     }
 
@@ -27,23 +25,30 @@
 
 }
 
+@media(min-width: 1450){
+    .home-journey{
+     bottom: 25%;
+
+    }
+}
+
 
 @media(max-width: 1280px){
     .home-journey {
- bottom: 251px;
+ /* bottom: 35%; */
     }
 }
 
 
 @media(max-width: 1024px){
     .home-journey {
- bottom: 173px;
+ /* bottom: 173px; */
     }
 }
 
 @media(max-width: 912px){
     .home-journey {
- bottom: 510px;
+ bottom: 39%
     }
     .custom-container{
         width: 100% !important;
@@ -71,7 +76,7 @@
            width: 100% !important;
        }
        .home-journey {
-        bottom: 411px;
+        bottom: 36%
            }
 }
 
@@ -87,7 +92,7 @@
     }
     
     .home-journey{
-        bottom: 355px;
+        bottom: 35%;
     }
     .journey {
         font-size: 16px;
@@ -116,7 +121,7 @@
 
     }
     .home-journey {
-        bottom: 234px;
+        bottom: 35%;
     }
 
     .home-main h1 {
@@ -156,7 +161,7 @@
 
 @media(max-width: 414px){
     .home-journey {
-        bottom: 339px;
+        bottom: 41%;
     }
     ul {
         padding-left: 0rem !important;
@@ -176,7 +181,7 @@
 
 @media(max-width: 390px){
     .home-journey {
-        bottom: 332px;
+        /* bottom: 332px; */
     }
     .novels-items {
         transform: translate(0%, 0%) rotate(0deg);
@@ -188,19 +193,19 @@
     
     @media(max-width: 375px){
         .home-journey {
-            bottom: 248px;
+            bottom: 37%;
         }
         }
 
         
 @media(max-width: 360px){
     .home-journey{
-        bottom: 284px;
+        bottom: 39%
     }
 }
 @media(max-width: 280px){
     .home-journey {
-        bottom: 260px;
+        /* bottom: 260px; */
     }
 }
 
